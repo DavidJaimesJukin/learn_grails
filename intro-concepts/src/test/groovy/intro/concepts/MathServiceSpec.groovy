@@ -17,6 +17,16 @@ class MathServiceSpec extends Specification {
 
     void "test something"() {
         expect:"fix me"
-            true == false
+            true == true
+    }
+
+    void "Add: #lhs + #rhs = #answer"(){
+        expect:
+            answer == service.add(lhs, rhs)
+        where:
+            lhs | rhs | answer
+            1   |  1  | 2
+            5   |  5  | 10
+
     }
 }

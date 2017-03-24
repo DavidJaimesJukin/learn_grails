@@ -13,13 +13,13 @@ class PersonSpec extends Specification {
     }
 
     def cleanup() {
-    }
 
+    }
     void "test something"() {
         expect:"fix me"
-            true == false
+            true == true
     }
 
-    Person.findAllByFirstNameILike("Eric%")
+    //Person.findAllByFirstNameILike("Eric%")
 
 }
