@@ -11,6 +11,10 @@ class Book {
     Integer price
     Boolean published = false
 
+    Date datePublished
+    Date lasUpdated
+    Date dateCreated
+
     static belongsTo = [author: Author]
 
     static constraints = {

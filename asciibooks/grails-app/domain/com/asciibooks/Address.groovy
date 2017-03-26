@@ -13,7 +13,7 @@ class Address {
 
     static constraints = {
         street nullable: true
-        street2 nullable: true
+        street2 nullable:true
         city nullable: true
         state nullable: true
         country nullable: true
@@ -22,7 +22,7 @@ class Address {
         longitude nullable: true
     }
 
-    String toString(){
+    String toString() {
         (street ?: '') + (street2 ?: '') + (' ' + city ?: '') + (' ' + state ?: '') + (zipCode ? ", $zipCode" : '')
     }
 }

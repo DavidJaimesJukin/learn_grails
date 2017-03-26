@@ -1,7 +1,5 @@
 package com.asciibooks
 
-import sun.jvm.hotspot.debugger.Address
-
 class Author {
 
     String name
@@ -14,7 +12,7 @@ class Author {
     Date lastUpdated
     Date dateCreated
 
-    static hasMany = [books: Books]
+    static hasMany = [books: Book]
 
     static constraints = {
         penName nullable: true
@@ -22,5 +20,9 @@ class Author {
 
     String getDisplayName(){
         penName ?: name
+    }
+
+    def getBooks(){
+        Book.findAllByAuthor(this)
     }
 }
