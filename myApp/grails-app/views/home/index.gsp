@@ -15,7 +15,7 @@
 
         <p>There are ${vehicleTotal} vehicles in the database.</p>
         <ul>
-            <g:each in = "${Vehicle.list()}" var="vehicle">
+            <g:each in="${vehicleList}" var="vehicle">
                 <g:link controller="vehicle" action="show" id="${vehicle.id}">
                     ${vehicle.name} - ${vehicle.year} ${vehicle.make.name} ${vehicle.model.name}
                 </g:link>
