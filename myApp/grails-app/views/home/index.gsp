@@ -3,6 +3,13 @@
 <head>
     <meta name="layout" content="public"/>
     <title>Home Page</title>
+
+    <asset:javascript src="jquery-3.1.1.js"/>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            console.log("JQuery 3.1.1 Loaded!")
+        })
+    </script>
 </head>
 <body>
 
